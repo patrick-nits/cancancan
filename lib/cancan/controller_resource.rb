@@ -269,7 +269,7 @@ module CanCan
     end
 
     def name_from_controller
-      @params[:controller].sub("Controller", "").underscore.split('/').last.singularize
+      @params[:controller].sub("Controller","").underscore.split('/').join('_').singularize
     end
 
     def instance_name
